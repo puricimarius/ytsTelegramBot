@@ -94,7 +94,10 @@ namespace YtsTelegramBot
             var buttons = new List<InlineKeyboardButton>();
             for (int i = 0; i < resMovie.data.movie.torrents.Count; i++)
             {
-                buttons.Add(new InlineKeyboardButton{Text = resMovie.data.movie.torrents[i].quality,  Url = resMovie.data.movie.torrents[i].url});
+                buttons.Add(new InlineKeyboardButton{
+                    Text = $"{resMovie.data.movie.torrents[i].type} {resMovie.data.movie.torrents[i].quality}",  
+                    Url = resMovie.data.movie.torrents[i].url
+                });
             }
 
             await Bot.SendPhotoAsync(

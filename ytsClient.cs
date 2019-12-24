@@ -73,5 +73,6 @@ namespace YtsClient
     class Torrent {
         public string url { get; set; }
         public string quality { get; set; } 
+        public string type { get; set; }
     }
 }
