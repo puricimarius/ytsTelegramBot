@@ -9,7 +9,7 @@ namespace YtsTelegramBot
 {
     class Program
     {
-        static readonly string API_KEY = "889160236:AAElNTg18z6EXqGlvv3cMDJ3wJBztZtHd00";
+        static readonly string API_KEY = "The Api Key";
         static readonly TelegramBotClient Bot = new TelegramBotClient(API_KEY);
 
         static void Main(string[] args)
