@@ -9,7 +9,7 @@ namespace YtsTelegramBot
 {
     class Program
     {
-        static readonly string API_KEY = "The Api Key";
+        static readonly string API_KEY = "Your Api Key";
         static readonly TelegramBotClient Bot = new TelegramBotClient(API_KEY);
 
         static void Main(string[] args)
@@ -68,7 +68,7 @@ namespace YtsTelegramBot
                     for (int i = 0; i < res.data.movies.Count; i++)
                     {
                         output += $"{i+1}) {res.data.movies[i].title_long}\n";
-                        buttons.Add(new InlineKeyboardButton{Text = $"{i+1}", CallbackData = $"{res.data.movies[0].id}"});
+                        buttons.Add(new InlineKeyboardButton{Text = $"{i+1}", CallbackData = $"{res.data.movies[i].id}"});
                     }
 
                     var inlineKeyboard = new InlineKeyboardMarkup(buttons.ToArray());
